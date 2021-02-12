@@ -1,0 +1,43 @@
+/* @ Common */
+html,
+body {
+  font-family: "Roboto", "sans-serif";
+  /* Browser에서 제공하는 font-size는 16px */
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* @ Button */
+.btn {
+  position: relative;
+  height: 40px;
+  background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.btn.btn--primary {
+  border: 1px solid #65b836;
+  color: #fff;
+  background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
