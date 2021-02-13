@@ -2,7 +2,7 @@
 html,
 body {
   font-family: "Roboto", "sans-serif";
-  /* Browser에서 제공하는 font-size는 16px */
+  /* Browser에서 제공하는 기본 font-size는 16px */
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -40,4 +40,45 @@ body {
   border: 1px solid #65b836;
   color: #fff;
   background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
+
+/* @ Input */
+.input--text {
+  height: 34px;
+  font-size: 16px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  /* 
+    기본적으로 Box 외부에 shadow가 생성되지만,
+    inset을 사용하면, Box 내부에 shadow 생성
+  */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+.input--text:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+    0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+/* 
+  Vendor Prefix - Browser별 접두사
+  -webkit-: Chrome, Safari
+  -ms-: explore, edge
+  -moz-: firefox
+  -o-: opera
+*/
+.input--text::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+.input--text::-ms-input-placeholder {
+  color: #cacaca;
+}
+
+.input--text::-moz-input-placeholder {
+  color: #cacaca;
 }
