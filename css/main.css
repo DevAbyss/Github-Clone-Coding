@@ -21,6 +21,37 @@ a {
   text-decoration: none;
 }
 
+/* @ SUMMARY */
+.summary {
+}
+
+.summary__title {
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.summary__description {
+  font-size: 25px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
+}
+
+/* @ SECTION & CONTAINER */
+.section {
+  position: relative;
+}
+
+.section .container {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1024px;
+  /* width가 정의돼 있으면 margin: 0 auto를 이용해 중앙 정렬 가능 */
+  margin: 0 auto;
+}
+
 /* # HEADER */
 header {
   background: #fff;
@@ -29,10 +60,7 @@ header {
 }
 
 header .container {
-  max-width: 1024px;
   height: 80px;
-  /* width가 정의돼 있으면 margin: 0 auto를 이용해 중앙 정렬 가능 */
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
@@ -115,6 +143,17 @@ header .sub-menu li a:hover {
 
 #search + [type="submit"] {
   display: none;
+}
+
+/* # VISUAL */
+.section--visual {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom-ledt;
+}
+
+.section--visual .container {
+  padding: 160px 0;
 }
 
 /* # BTN */
