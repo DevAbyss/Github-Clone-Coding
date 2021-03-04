@@ -80,12 +80,12 @@
   <section class="section section--visual">
     <div class="container">
       <div class="summary">
-        <div class="summary__title">
+        <h2 class="summary__title">
           How people build&nbsp;software
-        </div>
-        <div class="summary__description">
+        </h2>
+        <p class="summary__description">
           Millions of developers and companies build, ship, and&nbsp;maintain their software on GitHub—the largest and most advanced development platform in the world.
-        </div>
+        </p>
       </div>
       <form id="sign-form" method="POST" action="">
         <ul>
@@ -111,12 +111,12 @@
   <!-- ! FEATURE -->
   <section class="section section--feature">
     <div class="summary">
-      <div class="summary__title">
+      <h2 class="summary__title">
         Welcome home, developers
-      </div>
-      <div class="summary__description">
+      </h2>
+      <p class="summary__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. In reprehenderit, id inventore ratione unde ex.
-      </div>
+      </p>
     </div>
 
     <div class="video">
@@ -126,8 +126,75 @@
     </div>
 
     <div class="tiles">
-
+      <div class="container">
+        <ul>
+          <li>
+            <img src="./images/feature-tile__build.png" alt="build">
+            <h3>For everything you build</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <img src="./images/feature-tile__work.png" alt="work">
+            <h3>A better way to work</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <img src="./images/feature-tile__projects.png" alt="project">
+            <h3>Millions of projects</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+          <li>
+            <img src="./images/feature-tile__platform.png" alt="platform">
+            <h3>One platform, from start to finish</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
+
+  <!-- ! Where is -->
+  <section class="section section--where-is">
+    <div class="container">
+      <div class="summary">
+        <h2 class="summary__title">
+          Where is Github?
+        </h2>
+        <p class="summary__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In reprehenderit, id inventore ratione unde ex.
+        </p>
+      </div>
+
+      <div id="map">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ! script -->
+  <script>
+    function initMap() {
+      const myLatLng = {
+        lat: 37.782293,
+        lng: -122.391240
+      }
+
+      const map = new google.maps.Map(
+        document.getElementById('map'),
+        {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 18
+        }
+      );
+
+      const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'GitHub'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAElesN3fcCkg&callback=initMap" async defer></script>
 </body>
 </html>
